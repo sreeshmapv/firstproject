@@ -149,7 +149,7 @@
 
 }
 .four h2{
-  color: blue;
+  color:red;
 
 }
 .four p{
@@ -422,30 +422,30 @@
         
 
         </div>
-        <div class="four">
-          <div class="fourbox">
-            <h2 style="font-size: 35px;">354+</h2>
-            <p>completed project</p>
-          </div>
-          <div class="fourbox">
-            <h2 style="font-size: 35px;">119+</h2>
-            <p>Robotic Automation</p>
-          </div>
-          <div class="fourbox">
-            <h2 style="font-size: 35px;">99%</h2>
-            <p>web site Analyse</p>
-          </div>
-          <div class="fourbox">
-            <h2 style="font-size: 35px;">321+</h2>
-            <p>clients support Done</p>
-          </div>
-          
+       
+<div class="four">
+  <div class="fourbox">
+      <h2 id="completedProjects" style="font-size: 35px;">0+</h2>
+      <p>completed project</p>
+  </div>
+  <div class="fourbox">
+      <h2 id="roboticAutomation" style="font-size: 35px;">0+</h2>
+      <p>Robotic Automation</p>
+  </div>
+  <div class="fourbox">
+      <h2 id="websiteAnalyse" style="font-size: 35px;">0%</h2>
+      <p>web site Analyse</p>
+  </div>
+  <div class="fourbox">
+      <h2 id="clientSupport" style="font-size: 35px;">0+</h2>
+      <p>clients support Done</p>
+  </div>
+</div>
 
 
 
 
-
-        </div>
+        
 
         <div class="fivth">
           <h5>We Deliver Excellence</h5>
@@ -595,20 +595,63 @@
           }
       
           function scrollToTop() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
-          }
+  // Use smooth scrolling behavior for modern browsers
+  if ('scrollBehavior' in document.documentElement.style) {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  } else {
+    // For browsers that do not support smooth scrolling, jump to the top instantly
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  }
+}
+
+</script>
+<script>
+  // Function to increment the numbers
+  function incrementNumbers() {
+      // Set the final values
+      const finalValues = {
+          'completedProjects': 354,
+          'roboticAutomation': 119,
+          'websiteAnalyse': 99,
+          'clientSupport': 321
+      };
+
+      // Increment each value towards its final value
+      for (let elementId in finalValues) {
+          incrementValue(elementId, finalValues[elementId]);
+      }
+  }
+
+  // Function to update the content of an element with an incrementing value
+  function incrementValue(elementId, finalValue) {
+      let element = document.getElementById(elementId);
+      let currentValue = parseFloat(element.innerText);
       
-          // Update scroll progress bar
-          function updateScrollProgress() {
-            var scrollProgress = document.getElementById("scrollProgress");
-            var scrollTop = document.documentElement.scrollTop;
-            var totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var progress = (scrollTop / totalHeight) * 100;
-            scrollProgress.style.width = progress + "%";
-            scrollProgress.style.display = "block";
+      if (currentValue < finalValue) {
+          // Calculate the increment value based on the difference
+          let increment = 1;
+          let newValue = currentValue + increment;
+          
+          // Check if the newValue exceeds the finalValue
+          if (newValue > finalValue) {
+              newValue = finalValue;
           }
-        </script>
+          
+          element.innerText = Math.round(newValue) + '+';
+      }
+  }
+
+  // Call the incrementNumbers function every 10 milliseconds
+  setInterval(incrementNumbers, 10);
+</script>
+
+
+
+     
       
 
 
