@@ -4,8 +4,618 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+    header{
+        background-color: white;
+        text-align: center;
+        color: black;
+        font-family: urbanist,sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 80px;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    li{
+        margin-right: 20px;
+        position: relative;
+    }
+    a{
+        text-decoration: none;
+        display: block;
+       color: black;
+    }
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        color: black;
+        background-color: white;
+        min-width: 300px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      
+    }
+    .dropdown-content a {
+  
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+#img1{
+        
+        height: 50px;
+      
+        margin-right: 130px;
+}
+.icon{
+  margin-left: 100px;
+}
+
+.first{
+  background-image: url("background.jpg");
+  height: 700px;
+  background-size:  100%;
+  background-repeat: no-repeat;
+  padding-left: 600px;
+  padding-top: 30px;
+  color: white;
+  border-radius: 20px;
+
+}
+.second{
+  text-align: center;
+  
+}
+.second h5{
+  color: skyblue;
+}
+.secondimg{
+  position: relative;
+  display: flex;
+  padding-left: 250px;
+  height: 1000px;
+  
+
+}
+#img2{
+  width:200px;
+  height: 200px;
+  border-radius: 20px;
+  transform: translateX(50px);
+  margin-top: 250px;
+  
+ 
+  
+  
+}
+#img3{
+  border-radius: 30px;
+  margin-right: 70px;
+  
+}
+.setwo{
+  display: flex;
+}
+.third{
+  background-image: url("back2.jpg");
+  height: 600px;
+  background-size:  100%;
+  background-repeat: no-repeat;
+}
+.thirdbox{
+  height: 500px;
+  width: 800px;
+  border-style: solid;
+  background-color: white;
+  border-color: aliceblue;
+  border-radius: 20px;
+  margin-left: 500px;
+  transform: translateY(-100px);
+  margin-top: 30px;
+  
+}
+.thirdbox h5{
+  color: skyblue;
+  text-align: center;
+}
+.thirdbox h3{
+  text-align: center;
+}
+.thirdcon{
+  display: flex;
+  margin-left: 20px;
+}
+.four{
+  background-image: url("back3.jpg");
+  background-size:  100%;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+
+ 
+  
+
+}
+.four h2{
+  color: blue;
+
+}
+.four p{
+  color: white;
+}
+.fourbox{
+  text-align: center;
+  margin-left: 220px;
+  padding-top: 70px;
+  
+}
+.fivth{
+  text-align: center;
+  margin-top: 40px;
+}
+.fivth h5{
+  color: skyblue;
+}
+.video{
+  display: flex;
+  margin-left: 150px;
+
+}
+#text-overlay{
+  transform: translateY(-110px);
+  color: white;
+}
+.six{
+  background-image: url("back4.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 750px;
+  
+}
+.six h5{
+  text-align: center;
+  color: skyblue;
+} 
+.six h2{
+  text-align: center;
+}
+.sixbox{
+  height: 250px;
+  width: 500px;
+  border-style: solid;
+  border-radius: 20px;
+  background-color: white;
+  border: none;
+  margin-left: 250px;
+  margin-top: 90px;
+  
+}
+.sixone{
+  display: flex;
+}
+.seven{
+  display: flex;
+  height: 300px;
+  
+
+}
+
+.seven img {
+
+  margin-top: 50px;
+  height: 60px;
+
+  margin-left: 100px;
+  
+
+}
+.sevenbox{
+  height: 300px;
+  width: 1100px;
+  background-image: url("back3.jpg");
+  border-radius: 10px;
+  
+  margin-left: 400px;
+  transform: translateY(70px);
+}
+.sevenone{
+  display: flex;
+}
+.eight{
+  background-image: url("back6.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 800px;
+}
+#s123{
+  height: 30px;
+  margin-right: 15px;
+}
+.footer{
+  padding-left: 450px;
+  padding-top: 200px;
+  display: flex;
+}
+#scrollToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      height: 50px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    #scrollProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #007BFF;
+      z-index: 9999;
+      display: none;
+    }
+    
+</style>
+
 </head>
 <body>
-    tests
+    <header>
+       
+        
+        <nav>
+            <img id="img1"  src="logo.png">
+          <ul>
+            <li class="dropdown">
+            <a href="#">Home</a>
+            <div class="dropdown-content">
+                <a href="#">home main</a>
+                <a href="#">AI solutions</a>
+                <a href="#">it solution</a>
+              </div>
+            </li>
+            
+            <li> <a href="#">About us</a> </li>
+              
+            
+            <li class="dropdown">
+            <a href="#">pages</a>
+            <div class="dropdown-content">
+                <a href="#">our team</a>
+                <a href="#">Services</a>
+                <a href="#">Testimonial</a>
+              </div>
+            </li>
+            <li class="dropdown">
+            <a href="#">Blog</a>
+            <div class="dropdown-content">
+                <a href="#">blog grid</a>
+                <a href="#">blog list</a>
+                <a href="#">blog single</a>
+              </div>
+            </li>
+            
+            <li><a href="#">Contact</a></li>
+            
+          </ul>
+           
+    <div class="icon">
+      <img style="height: 20px; margin-right: 15px;" src="f.png">
+      <img style="height: 20px; margin-right: 15px;" src="t.png">
+      <img style="height: 20px; margin-right: 15px;" src="i.png">
+      <img style="height: 20px; margin-right: 15px;" src="search.png">
+      <img style="height: 20px;"  src="cart.png">
+  </div>
+        
+        </nav>
+      </header>
+      <div class="first">
+        <h4>YOUR NETWORK BECOMES EASIER TO OPERATE BY AI</h4>
+        <h1 style="font-size: 80px;"> Take the next steps <br> for an <span style="color: rgb(8,106,216);"> AI-driven </span> <br>enterprice.</h1>
+        <h4>We provide the most responcive and functional IT</h4>
+        <button style="height: 30px; width: 120px; background-color: rgb(35, 171, 224) ; color: white; border: none;" type="button" name="Readmore">Read more</button>
+      </div>
+      
+      <div class="second">
+        <h5>who we are</h5>
+        <h2 style="font-size: 35px;">An artificial interlligence company that excels in <br> visual recognition , solving real-world problem for <br> business.</h2>
+      </div>
+      
+        <div class="secondimg">
+       <div> <img  id="img2"  src="about-sm3.jpg"> </div>
+        <div><img  id="img3" src="about-big3.jpg"> </div>
+        <div>
+        <h4>Accelerate innovation with world-class tech <br> <br>teams We'll match you to an entire remote team <br><br>of incredible freelance talent</h4>
+        <div class="setwo">
+          <img style="margin-right: 30px; height: 50px; margin-top: 20px;" src="router.png">
+          <div>
+          <h4>Argumented  Reality</h4>
+          <p>Accelerate innovation with world-class tech teams</p>
+          </div>
+
+          
+        </div>
+        <div class="setwo">
+          <img style="margin-right: 30px; height: 50px; margin-top: 20px;" src="power.png">
+          <div>
+          <h4>Data Resolving</h4>
+          <p>Accelerate innovation with world-class tech teams</p>
+          </div>
+          </div>
+
+        </div>
+       
+        </div>
+        <div class="third">
+          <div class="thirdbox">
+            <h5>Whats Included In Services</h5>
+            <h3 style="font-size: 35px;">Building everything you <br> need for your business</h3>
+
+        
+          <div class="thirdcon">
+            <div>
+            <img id="third" style="height: 40px;" src="third1.jpg">
+            <div>
+              <h4>AI base business <br>solution</h4>
+              <p>Accelerate innovation with world-<br>class tech teams we'll match you to<br>an entire remote team.</p>
+            </div>
+
+
+          </div>
+          <div class="thirdcon">
+            <div>
+            <img id="third" style="height: 40px;" src="third2.jpg">
+            <div>
+              <h4>Chatbot with <br>Real meeting</h4>
+              <p>Accelerate innovation with world-<br>class tech teams we'll match you to<br>an entire remote team.</p>
+            </div>
+            </div>
+            <div class="thirdcon">
+              <div>
+              <img id="third" style="height: 40px;" src="third3.jpg">
+              <div>
+                <h4>Automate data <br>saving</h4>
+                <p>Accelerate innovation with world-<br>class tech teams we'll match you to<br>an entire remote team.</p>
+              </div>
+  
+  
+            </div>
+            <div class="thirdcon">
+              <div>
+              <img id="third" style="height: 40px;" src="third4.jpg">
+              <div>
+                <h4>Robotic <br>Automation</h4>
+                <p>Accelerate innovation with world-<br>class tech teams we'll match you to<br>an entire remote team.</p>
+              </div>
+  
+  
+            </div>
+
+
+          </div>
+
+
+          
+
+          </div>
+          </div>
+          </div>
+          </div>
+        
+
+        </div>
+        <div class="four">
+          <div class="fourbox">
+            <h2 style="font-size: 35px;">354+</h2>
+            <p>completed project</p>
+          </div>
+          <div class="fourbox">
+            <h2 style="font-size: 35px;">119+</h2>
+            <p>Robotic Automation</p>
+          </div>
+          <div class="fourbox">
+            <h2 style="font-size: 35px;">99%</h2>
+            <p>web site Analyse</p>
+          </div>
+          <div class="fourbox">
+            <h2 style="font-size: 35px;">321+</h2>
+            <p>clients support Done</p>
+          </div>
+          
+
+
+
+
+
+        </div>
+
+        <div class="fivth">
+          <h5>We Deliver Excellence</h5>
+          <h2 style="font-size: 35px;">Solutions To Common AI Problems</h2>
+          <div class="video">
+          <div style="margin-right: 30px;">
+            <video height="460" autoplay loop muted>
+              <source src="video1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div id="text-overlay">
+            <p>Categorizing Airbnb LIsting<br>Photoes Using Tensorflow.</p>
+        </div>
+          </div>
+          <div>
+          <div style="margin-bottom: 5px;">
+            <video width="440" height="260" autoplay loop muted>
+              <source src="video2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div id="text-overlay">
+            <p>Generative Adversarial <br>Network with MI.</p>
+        </div>
+          </div>
+          <div>
+            <video width="440" height="260" autoplay loop muted>
+              <source src="video3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div id="text-overlay">
+            <p>Generative Adversarial <br>Network with MI.</p>
+        </div>
+          </div>
+          </div>
+          </div>
+        </div>
+        <div class="six">
+          <div>
+            <h5>Testimonial</h5>
+            <h2 style="font-size: 35px;">20K+ Satisfied Clients Worldwide</h2>
+          </div>
+          <div style="display: flex;">
+          <div class="sixbox">
+            <div class="sixone">
+              <div>
+            <img style="height: 90px; width: 90px; box-shadow: 5px 5px  black; transform: translateX(-30px); margin-top: 80px;"  src="man1.jpg">
+            <img style="height: 40px; transform: translateY(-90px);" src="message.jpg">
+              </div>
+              <div style="transform: translateY(65px);">
+            <p>Accelerate innovation with world-class tech<br>teams beyond more stoic this along godness<br>hey this is wow manafee<br><br>MIKE HOLDER/CEO HARLOND INC</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="sixbox">
+            <div class="sixone">
+              <div>
+            <img style="height: 90px; width: 90px; box-shadow: 5px 5px  black; transform: translateX(-30px); margin-top: 80px;"  src="man2.jpg">
+            <img style="height: 40px; transform: translateY(-90px);" src="message.jpg">
+              </div>
+              <div style="transform: translateY(65px);">
+            <p>Accelerate innovation with world-class tech<br>teams beyond more stoic this along godness<br>hey this is wow manafee<br><br>MIKE HOLDER/CEO HARLOND INC</p>
+              </div>
+            </div>
+
+          </div>
+          </div>
+
+        </div>
+        <div>
+        <div class="seven">
+          <div style="align-items: center; width: 100%; display: flex;">
+          <img src="brand-1.png">
+          <img src="brand-2.png">
+          <img src="brand-3.png">
+          <img src="brand-4.png">
+          <img src="brand-5.png">
+          </div>
+        </div>
+        </div>
+
+<div class="sevenbox">
+  <div class="sevenone">
+  <div style="margin-left: 100px; margin-right: 300px; margin-top: 40px; color: white;">
+  <h1 style="font-size: 45px;">To Make request for <br> furthur information, <br> contact us</h1>
+  </div>
+  <div style="margin-top: 50px; text-align: center;" >
+    <img style="height: 70px;" src="cta-icon2.png">
+    <h3 style="color: white;">call us for enquery</h3>
+    <h1 style="color: lightseagreen; font-size: 40px;">+44920090505</h1>
+
+  </div>
+  </div>
+
+</div>
+        
+        <div class="eight">
+          <div class="footer">
+            <div style="margin-right: 70px;">
+            <img style="height: 50px;" src="logo-white.png">
+            <p style="color: white;">Accelerate innovation with world-<br><br>class tech teams we'll match you to<br><br>an entire remote team of <br> <br>incredible freelance talent.</p>
+            <img id="s123" src="faceb.png">
+            <img id="s123" src="twitter.png">
+            <img id="s123" src="link.png">
+            </div>
+            <div style="color: white; margin-right: 90px;">
+              <h3 style="font-size: 25px;">Use full links</h3>
+              <p style="color: gainsboro;">terms$conditions <br><br>About company<br><br>payment gateway<br><br>policy</p>
+            </div>
+            <div style="color: white;">
+              <h3 style="font-size: 25px; margin-right: 70px;">Our Services</h3>
+              <p style="color: gainsboro;">Data security <br><br>it management<br><br> out sourcing<br><br>Networking</p>
+            </div>
+            <div style="color: white;">
+              <h3 style="font-size: 25px; margin-right: 40px;">contact information</h3>
+              <p style="color: gainsboro;"> <img style="height: 20px;" src="4213179.png">  +440920090508<br><br><img style="height: 20px;" src="5539623.png"> info@example.com<br><br> <img style="height: 20px;" src="149060.png"> 80 east 65 street</p>
+            </div>
+
+            
+
+          </div>
+          <button id="scrollToTopBtn" onclick="scrollToTop()"><img style="height: 30px;" src="11835900.png"></button>
+        <div id="scrollProgress"></div>
+      
+        <!-- Your content goes here -->
+     
+          <!-- Add enough content to make scrolling possible -->
+        </div>
+      
+          
+        </div>
+        
+        <script>
+          // Show/hide scroll-to-top button based on scroll position
+          window.onscroll = function() {
+            showScrollButton();
+            updateScrollProgress();
+          };
+      
+          function showScrollButton() {
+            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              scrollToTopBtn.style.display = "block";
+            } else {
+              scrollToTopBtn.style.display = "none";
+            }
+          }
+      
+          function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+          }
+      
+          // Update scroll progress bar
+          function updateScrollProgress() {
+            var scrollProgress = document.getElementById("scrollProgress");
+            var scrollTop = document.documentElement.scrollTop;
+            var totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var progress = (scrollTop / totalHeight) * 100;
+            scrollProgress.style.width = progress + "%";
+            scrollProgress.style.display = "block";
+          }
+        </script>
+      
+
+
+       
+      
+      
+    
+    
 </body>
 </html>
